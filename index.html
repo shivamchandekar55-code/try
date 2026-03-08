@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandu Saoji Family Restaurant With Cafe | Indian, Chinese & Italian Cuisine in Nagpur</title>
+    <meta name="description" content="Experience authentic Indian, Chinese & Italian cuisine at Pandu Saoji Family Restaurant in Nagpur. Famous for our signature Chicken Lollipop. Perfect for families!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #A52A2A;
+            --primary-orange: #E67E22;
+            --gold: #D4AF37;
+            --cream: #FFF8DC;
+            --dark-brown: #3E2723;
+            --deep-green: #2E7D32;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-brown);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+.floating-btns {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 120px;
+    right: 70px;
+    z-index: 9999;
+}
+
+
+        .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--gold);
+            color: var(--dark-brown);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(165, 42, 42, 0.95), rgba(230, 126, 34, 0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23FFF8DC" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--cream);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark-brown);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-red);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: transparent;
+            color: var(--white);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-alt {
+            background: var(--cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--dark-brown);
+            opacity: 0.8;
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            transform: translateY(-40px);
+        }
+
+ .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; /* adjust this number */
+    display: block;
+}
+
+  
+
+        
+        .placeholder-img {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        /* Cuisines Section */
+        .cuisines-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .cuisine-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--gold);
+        }
+
+        .cuisine-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .cuisine-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .cuisine-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .cuisine-card p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .dish-list {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+        }
+
+        .dish-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--cream);
+            color: var(--dark-brown);
+        }
+
+        .dish-list li::before {
+            content: '✓';
+            color: var(--deep-green);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Signature Section */
+        .signature-section {
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-orange));
+            color: var(--white);
+        }
+
+        .signature-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .signature-text h2 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .signature-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .signature-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+                width: 100%;
+    max-width: 800px; /* optional */
+    margin: 0 auto; /* optional: centers it */
+}
+
+/* ✅ Add this part below */
+.signature-image img {
+    width: 100%;
+    height: auto; /* lets the height adjust naturally */
+    display: block;
+    border-radius: 20px;
+    background: none !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+}
+        
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Gallery Section */
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+   
+    
+}
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;              /* 🔑 Keeps natural height */
+    display: block;
+    object-fit: contain;       /* ensures full image is visible */
+    border-radius: 15px;
+    background: none !important;
+    mix-blend-mode: normal !important;
+    filter: none !important;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 0.8;
+}
+
+
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-orange);
+            min-width: 40px;
+        }
+
+        .contact-item h3 {
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--dark-brown);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-orange);
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 500px;
+            background: transparent;
+        }
+
+        .map-container iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-brown);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background: var(--primary-red);
+                flex-direction: column;
+                padding: 2rem;
+                transition: left 0.3s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content,
+            .signature-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cuisines-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>🍽️</span>
+                <span>Pandu Saoji</span>
+            </a>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#cuisines">Cuisines</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:9305700000" class="cta-button">📞 Call Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Pandu Saoji Family Restaurant With Cafe</h1>
+            <p>Where Every Family Member Finds Their Favorite—Authentic Indian, Chinese & Italian Cuisine</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Reserve Your Table</a>
+                <a href="tel:9305700000" class="btn-secondary">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+    <h2 style="color: var(--primary-red); font-size: 2.5rem; margin-bottom: 1.5rem;">
+        A Story of Struggle and Success – Kapil Pandurang Takatewale
+    </h2>
+
+    <p>Nagpur is widely known for its spicy and traditional Saoji cuisine, a unique food culture of the Vidarbha region. Carrying forward this rich tradition through determination and hard work is young entrepreneur Kapil Pandurang Takatewale. Today, at just 29 years of age, he is recognized as the owner of Pandu Saoji & Family Restaurant, but the journey behind this success is filled with struggle, sacrifice, and perseverance.</p>
+
+    <p>Kapil comes from a simple family background. Due to financial challenges, he began working at a young age, taking up seasonal jobs in small shops to support himself and his family. Later, he worked as a receptionist in a well-known hospital in Nagpur, dedicating himself day and night to ensure smooth operations. Despite his hard work and commitment, he did not always receive the appreciation he deserved and at times even faced injustice.</p>
+
+    <p>At that turning point in his life, he made a firm decision — he would no longer work under someone else and would start his own business.</p>
+
+    <p>Around that time, one of his friends had opened a bar. During a visit, his friend mentioned that the biryani center on the lower floor had closed and the space was available for rent. Without hesitation, Kapil said, “Will you give that place to me? I want to start a Saoji food restaurant.”</p>
+
+    <p>Kapil was only 26 years old when he made this bold decision. The choice was sudden, but deeply rooted in culture. Belonging to the Halba community, where Saoji cuisine is a traditional and popular food style, Kapil had grown up surrounded by these flavors. His mother had also worked as a cook in catering, which further strengthened his connection with authentic Saoji food.</p>
+
+    <p>Having lost his father at a young age, Kapil always carried the emotional weight of not being able to achieve something big while his father was alive. When he finally became capable and responsible, his father was no longer there to witness his success. With this emotion in his heart, in 2022 he started the restaurant in his father’s name and founded Pandu Saoji & Family Restaurant.</p>
+
+    <p>Interestingly, Kapil had never worked in a kitchen before starting his restaurant. Yet, without worrying about profit or loss, he took the courageous step forward. The early days were full of challenges, but he refused to give up. Through dedication, relentless hard work, and without even hiring a cook initially, he built the foundation of his business himself.</p>
+
+    <p>Today, Pandu Saoji & Family Restaurant is a well-known name in Nagpur for authentic Saoji cuisine. His journey of struggle, determination, and love for his family stands as an inspiration for many young entrepreneurs.</p>
+
+    <p>This story reminds us that when dreams are strong and efforts are sincere, success eventually finds its way.</p>
+</div>
+                <div class="about-image">
+      <img src="https://i.ibb.co/Pzm5chNN/066ab949-caba-4585-a876-b16decb525ef.jpg" alt="About Image 2" />              
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuisines Section -->
+    <section id="cuisines" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Cuisines</h2>
+                <p>Three Distinct Flavors Under One Roof</p>
+            </div>
+            <div class="cuisines-grid">
+                <div class="cuisine-card">
+                    <div class="cuisine-icon">🍛</div>
+                    <h3>Authentic Indian</h3>
+                    <p>Experience the rich spices and traditional recipes of India. From tandoori specialties to aromatic curries, our Indian menu brings authentic flavors prepared with time-honored techniques.</p>
+                    <ul class="dish-list">
+                        <li>Tandoori Chicken</li>
+                        <li>Butter Chicken</li>
+                        <li>Paneer Tikka</li>
+                        <li>Biryani Varieties</li>
+                        <li>Traditional Breads</li>
+                    </ul>
+                </div>
+                <div class="cuisine-card">
+                    <div class="cuisine-icon">🥢</div>
+                    <h3>Bold Chinese</h3>
+                    <p>Craving something savory and exciting? Our Chinese menu features bold flavors, from crispy appetizers to saucy mains. Every dish is prepared fresh with the perfect balance of flavors.</p>
+                    <ul class="dish-list">
+                        <li>Chicken Lollipop ⭐</li>
+                        <li>Manchurian (Veg & Non-Veg)</li>
+                        <li>Hakka Noodles</li>
+                        <li>Fried Rice</li>
+                        <li>Chili Dishes</li>
+                    </ul>
+                </div>
+                <div class="cuisine-card">
+                    <div class="cuisine-icon">🍝</div>
+                    <h3>Classic Italian</h3>
+                    <p>From creamy pastas to pizzas, our Italian selection offers familiar favorites the whole family loves. Simple, delicious, and made with quality ingredients.</p>
+                    <ul class="dish-list">
+                        <li>Pasta Varieties</li>
+                        <li>Wood-Fired Pizzas</li>
+                        <li>Garlic Bread</li>
+                        <li>Italian Soups</li>
+                        <li>Desserts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Section -->
+    <section class="section signature-section">
+        <div class="container">
+            <div class="signature-content">
+                <div class="signature-text">
+                    <h2>Our Signature Chicken Lollipop!</h2>
+                    <p>Crispy on the outside, juicy on the inside—our Chicken Lollipop is the dish that keeps families coming back. Perfectly seasoned, beautifully presented, and loved by kids and adults alike.</p>
+                    <p>When you visit Pandu Saoji, this is the one dish you absolutely must try!</p>
+                    <a href="#contact" class="btn-primary">Visit Us Today</a>
+                </div>
+                <div class="signature-image">
+                    <a href="http://zoma.to/r/20611686" target="_blank">
+                    <img src ="https://i.ibb.co/RpDmF4b0/unnamed.webp" alt = "signature" />
+                  </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Families Love Us</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Something for Everyone</h3>
+                    <p>With three cuisines under one roof, every family member finds their favorite—no more debates about where to eat!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">😊</div>
+                    <h3>Kid-Friendly Atmosphere</h3>
+                    <p>Spacious seating, welcoming staff, and dishes kids actually enjoy. We make dining out with children easy and stress-free.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Clean & Comfortable</h3>
+                    <p>Our restaurant is spotlessly maintained with comfortable seating and a pleasant ambiance perfect for family gatherings.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🥗</div>
+                    <h3>Fresh Quality Ingredients</h3>
+                    <p>We use only the freshest ingredients and traditional cooking methods to ensure authentic, delicious flavors in every dish.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Affordable Family Dining</h3>
+                    <p>Enjoy quality multi-cuisine dining without breaking the bank. Great value for families of all sizes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Convenient Location</h3>
+                    <p>Easy to find with accessible parking—making your family dining experience hassle-free from start to finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Delicious Offerings</h2>
+                <p>A Visual Feast</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="http://zoma.to/r/20611686" target="_blank">
+                    <img src="https://i.ibb.co/LX3LFCHB/image.png" alt = "gallery-item" />
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="http://zoma.to/r/20611686" target="_blank">
+                    <img src="https://i.ibb.co/ZRm3GKDB/t-VT9-RU7-T5-TJi-HTXQ-nsngm3y-Xb-XKHn-GAw-Jyg-BO37-OIy-UOc4-Yb84y-Hc57-AQ9-XZp-Hw-OFICN6-3aq1-T3-Wmj.webp" alt = "gallery-item" />
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="http://zoma.to/r/20611686" target="_blank">
+                    <img src="https://i.ibb.co/VcWSMQ2n/4d-u-RY-ae-H9x-OUHA5-BZe-BPUJWa-Hv-Ak-FEwt-Uogfagl-HGp-CCsve-TTc-DMjmh-LSO5-Pe-N4-GO2o-HNq-HRl-XXp-C.webp" alt = "gallery-item" />
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="http://zoma.to/r/20611686" target="_blank">
+                    <img src="https://i.ibb.co/N2kLQMm1/1-Lh-Ne-Rg8qt-5e-Kot4-Uorl-Cg5-UWKyz-Yrw-KKg-Wf-Sq-SQsqojgv-UKo-Ynj8spfpb8fv6-Cj-9mv61-Aq8vej-Vkl6-W.webp" alt - "gallery-item"/>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="http://zoma.to/r/20611686" target="_blank">
+                    <img src="https://i.ibb.co/Y7HBzCZ2/t-Adf-WFN5-VSbv-P78a214ukc0-Mzs-BK-g-CYLr-TCYus-R2-ZX-ekn1xn-MNr-RISg-GMUYcy-PK0ph-Op5o-To-MAF88ij9r.webp" alt = "gallery-item"/>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="http://zoma.to/r/20611686" target="_blank">
+                    <img src="https://i.ibb.co/YB9d8M7P/9lc4j-IFoxkq7-Zz-Cmo-Kh6-Xe-Bhe-EOESdm4-Bc-XF-3-Tuj-Lc-Yhtggg-RN0pmz-Xl1-H7-ABf-M4l4-T65y-DNVNPTlh80.webp" alt = "gallery-item"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visit Us Today</h2>
+                <p>We're Ready to Serve Your Family!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Mehendi Bhag Corner, Jaripatka,<br>
+                            Nagpur, Maharashtra<br>
+                            Coordinates: 21.169479, 79.116255</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:9305700000">93057 XXXXX</a>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Tap to call for reservations</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Open Daily<br>
+                            11:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map-container">
+  <!-- Working link -->
+ 
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.5721663858685!2d79.1161305063501!3d21.16941796063544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c707087b9179%3A0x80a6e2650e6b16d2!2sPandu%20Saoji%20Family%20Restaurant%20With%20Cafe!5e0!3m2!1sen!2sin!4v1759930361736!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+  
+
+  <!-- Embedded map -->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.5721663858685!2d79.1161305063501!3d21.16941796063544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c707087b9179%3A0x80a6e2650e6b16d2!2sPandu%20Saoji%20Family%20Restaurant%20With%20Cafe!5e0!3m2!1sen!2sin!4v1759930361736!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+  
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#cuisines">Our Cuisines</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="social-links">
+              <a href="https://zoma.to/r/20611686" target="_blank" title="Zomato" class="social-icon">
+             <img src="https://i.ibb.co/jKgN3ks/pngwing-com.png" alt="Zomato" style="width: 65px; height:auto;">
+              </a>
+              
+              <a href="https://www.swiggy.com/city/nagpur/pandu-saoji-pachpaoli-rest733918?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder" title="Zomato" class="social-icon">
+             <img src="https://i.ibb.co/LD6gvVNz/pngwing-com-2.png" alt="swiggy" style="width: 32px; height:auto;">
+              </a>
+       
+                
+            </div>
+            <p>&copy; 2024 Pandu Saoji Family Restaurant With Cafe. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.7;">Serving Nagpur with Love & Delicious Food</p>
+        </div>
+    </footer>
+ <!-- FLOATING BUTTONS -->
+<div class="floating-btns">
+        <a href="https://zoma.to/r/20611686" target="_blank" title="Zomato" class="social-icon">
+             <img src="https://i.ibb.co/jKgN3ks/pngwing-com.png" alt="zomato" style="width: auto; height:40px;">
+              </a>
+        </div>
+<div class="floating-btn">
+        <a href="https://www.swiggy.com/city/nagpur/pandu-saoji-pachpaoli-rest733918?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder" target="_blank" title="swiggy" class="social-icon">
+             <img src="https://i.ibb.co/LD6gvVNz/pngwing-com-2.png" alt="swiggy" style="width: auto; height:50px;">
+              </a>
+        </div>        
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu after clicking
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Add scroll effect to navigation
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)';
+            } else {
+                nav.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.cuisine-card, .feature-card, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
